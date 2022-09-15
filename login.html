@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <title>TELA DE LOGIN</title>
+</head>
+<body>
+    <div class="container"> <!--div de conteudo principal-->
+        <div class="card">  <!--div para englobar meu conteúdo dentro de um quadrado branco-->
+            <h1>entrar</h1>
+
+            <!-- inputs dentro de uma div que vou chamar de label-flutuante -->
+            <div class="label-float">
+                <input type="text" id="user" placeholder="" required>
+                <label id="labelUser" for="user">Usuario</label>
+            </div>
+            
+            <div class="label-float">
+                <input type="password" id="password" placeholder="" required>
+                <label id="labelPassword"  for="password">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <!-- botão de envio -->
+            <div class="justify-center">
+                <button>Entrar</button>
+            </div>
+
+            <!-- div para uma linha que vai ser estilizada no css -->
+            <div class="justify-center">
+                <hr>
+            </div>
+
+            <p>Não tem uma conta?
+                <a href="cadastrar.html">Cadastre-se</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>
