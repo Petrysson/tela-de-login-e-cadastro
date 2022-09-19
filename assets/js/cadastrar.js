@@ -82,10 +82,30 @@ passwordConfirm.addEventListener('keyup', ()=>{
 // FUNÇÃO DO BOTÃO CADASTRAR
 function cadastrar(){
     if(validName && validUser && validPassword && validConfirmPassword){
+
+        // CADASTRAR NO LOCALSTORAGE
+        let listUser = JSON.parse(localStorage.getItem('listUser') || '[]');
+
+        listUser.push(
+            {
+                name_CAD: name.value,
+                user_CAD: user.value,
+                password_CAD: password.value
+            }
+        )
+
+        localStorage.setItem('listUser', JSON.stringify(listUser))
+
         msg_sucess.setAttribute('style', 'display:block');
         msg_sucess.innerHTML = 'cadastrando...'
         msg_error.innerHTML = '';
         msg_error.setAttribute('style', 'display:none');
+
+        // DEPOIS QUE TODO O CÓDIGO ACIMA FOR EXECUTADO EU QUERO QUE VÁ PARA A TELA DE LOGIN COM UM DETERMINADO ESPAÇO DE TEMPO
+        setTimeout(()=>{
+            window.location.href = 'http://127.0.0.1:5500/login.html';
+        },3000)
+
     } else {
         msg_error.setAttribute('style', 'display:block');
         msg_error.innerHTML = 'preencha todos os campos corretamente';
