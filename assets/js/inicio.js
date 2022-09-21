@@ -9,11 +9,11 @@ logado.innerHTML = `Olá ${userLogado.user}, seja bem vindo`
 
 if(localStorage.getItem('token') == null){
     alert('você precisa estar logado para ter acesso a essa página')
-    window.location.href = 'http://127.0.0.1:5500/login.html';
+    window.location.href = 'http://127.0.0.1:5500/index.html';
 
 }
 
 function go_out(){
     localStorage.removeItem('token');
-    window.location.href = 'http://127.0.0.1:5500/login.html';
+    window.location.href = 'http://127.0.0.1:5500/index.html';
 }

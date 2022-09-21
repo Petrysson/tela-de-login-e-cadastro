@@ -103,7 +103,7 @@ function cadastrar(){
 
         // DEPOIS QUE TODO O CÓDIGO ACIMA FOR EXECUTADO EU QUERO QUE VÁ PARA A TELA DE LOGIN COM UM DETERMINADO ESPAÇO DE TEMPO
         setTimeout(()=>{
-            window.location.href = 'http://127.0.0.1:5500/login.html';
+            window.location.href = 'http://127.0.0.1:5500/index.html';
         },3000)
 
     } else {
